@@ -45,7 +45,6 @@ pip install flask
 
 
 4\. Run the app
-
 python app.py
 
 
@@ -53,6 +52,24 @@ python app.py
 
 
 5\. Visit `http://127.0.0.1:5000` in your browser
+
+
+
+
+## Running with Docker
+
+1. Build the Docker image
+docker build -t devops-project .
+
+
+2. Run the container
+docker run -p 5000:5000 devops-project
+
+
+3. Visit `http://127.0.0.1:5000` in your browser
+
+## Screenshots
+See the `screenshots/` folder for images of the app running inside Docker.
 
 
 
