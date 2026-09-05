@@ -73,3 +73,19 @@ See the `screenshots/` folder for images of the app running inside Docker.
 
 
 
+
+## CI/CD Pipeline
+
+This project uses GitHub Actions for continuous integration and deployment. On every push to `main`:
+
+1. CI (build-and-test): Installs dependencies, runs flake8 for code quality checks, and verifies the app imports without errors.
+2. CD (build-and-deploy): If CI passes, builds a Docker image, pushes it to Azure Container Registry, and restarts the Azure Web App to pull the new image.
+
+**Live application:** https://devops-project-webapp123.azurewebsites.net
+
+Workflow file: `.github/workflows/ci-cd.yml`
+
+See `screenshots/` for a successful pipeline run.
+
+
+
