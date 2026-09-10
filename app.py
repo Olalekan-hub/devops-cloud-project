@@ -5,7 +5,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello from my DevOps project! This app is running inside Flask."
+    return "Hello! Yusuf here. From my DevOps project! Running inside Flask."
+
+
+@app.route("/health")
+def health():
+    return "OK", 200
 
 
 if __name__ == "__main__":
